@@ -25,7 +25,7 @@ module.exports = async (req, res, next) => {
         unauthorized(res);
       }
     } catch (error) {
-      unauthorized(error);
+      unauthorized(res);
     }
 
     return; // break
