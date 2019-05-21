@@ -1,3 +1,3 @@
 module.exports = async (req, res) => {
-  res.send('This is secret')
-}
+  res.send("It is a secret");
+};
