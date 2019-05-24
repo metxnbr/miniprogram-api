@@ -20,6 +20,7 @@ module.exports = async (req, res, next) => {
       const results = await findByopenid(openid, ["session_key"]);
 
       if (session_key === results[0].session_key) {
+        res.locals.oauth = { results };
         next();
       } else {
         unauthorized(res);
