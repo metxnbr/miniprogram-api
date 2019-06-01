@@ -4,19 +4,18 @@ module.exports = {
    * http://pm2.keymetrics.io/docs/usage/application-declaration/
    */
   apps: [
-
     // LOCAL application
     {
-      name: 'miniprogram-api-local',
-      script: './server.js',
+      name: "miniprogram-api-local",
+      script: "./server.js",
       watch: true,
+      ignore_watch: ["./upload"],
       env: {
-        NODE_ENV: 'development',
+        NODE_ENV: "development"
       },
       env_production: {
-        NODE_ENV: 'production'
+        NODE_ENV: "production"
       }
-    },
-  ],
-
+    }
+  ]
 };
