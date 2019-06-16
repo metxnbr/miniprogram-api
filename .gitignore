@@ -9,5 +9,7 @@ stats.json
 npm-debug.log
 .idea
 
+logs
+
 config/env
 upload

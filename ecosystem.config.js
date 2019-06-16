@@ -9,13 +9,16 @@ module.exports = {
       name: "miniprogram-api-local",
       script: "./server.js",
       watch: true,
-      ignore_watch: ["./upload"],
+      ignore_watch: ["./upload", "./logs"],
       env: {
         NODE_ENV: "development"
       },
       env_production: {
         NODE_ENV: "production"
-      }
+      },
+      output: "./logs/out.log",
+      error: "./logs/error.log",
+      log_date_format: "DD-MM-YYYY"
     }
   ]
 };
